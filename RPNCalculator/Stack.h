@@ -13,9 +13,9 @@ public:
   boolean isEmpty();      // True if stack is empty
   boolean isFull();       // True if stack is full
   float peek();           // Returns top stack element
-  int8_t top;             // Stores the position of the top element
 private:
-  uint8_t _size = 20;  // Size of the stack
+  int8_t _top;             // Stores the position of the top element
+  uint8_t _size;  // Size of the stack
   float _stack[20];    // The stack array, to hold the data
 };
 
