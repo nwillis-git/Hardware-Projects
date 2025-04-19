@@ -27,9 +27,17 @@ char strAnswer[32];          // Stores the answer as a string
 bool answerPrinted = false;  // Has the answer been printed?
 
 void setup() {
-  lcd.begin(16, 2);     // Begin the LCD class
-  lcd.clear();          // Clear the screen
-  lcd.setCursor(0, 0);  // Top left corner
+  lcd.begin(16, 2);  // Begin the LCD class
+  splashScreen();    // Show the startup screen
+}
+
+void splashScreen() {
+  lcd.clear();                  // Clear the screen
+  lcd.setCursor(0, 0);          // Top left corner
+  lcd.print("RPN Calculator");  // Startup text
+  delay(3000);                  // Let it be seen
+  lcd.clear();                  // Clear
+  lcd.setCursor(0, 0);          // Top left corner
 }
 
 char getKey() {
