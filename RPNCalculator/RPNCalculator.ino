@@ -59,16 +59,12 @@ void processInput(char ch) {  // Directs to another function based on the type o
     case '-':
     case '*':
     case '/':                         // Check if input is an operation
-      if (stack.top < 1) {            // If there are less than 2 stack elements
-        errorMessage("Stack Empty");  // Error message
+      answer = evaluate(ch);             // Call the evaluate function
+      if (answer == INFINITY) {          // Check for dividing by 0
+        errorMessage("Div By 0 Error");  // Error message
       } else {
-        answer = evaluate(ch);             // Call the evaluate function
-        if (answer == INFINITY) {          // Check for dividing by 0
-          errorMessage("Div By 0 Error");  // Error message
-        } else {
-          stack.push(answer);  // Push the answer on the stack
-          displayAns(answer);  // Display the answer on the LCD
-        }
+        stack.push(answer);  // Push the answer on the stack
+        displayAns(answer);  // Display the answer on the LCD
       }
       break;
     case 'E':                             // Enter case
