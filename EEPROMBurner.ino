@@ -44,7 +44,7 @@ uint8_t feinbergExample[16] = {
   0b00100001,  // ADD 1
   0b01100010,  // STORETO 2
   0b11000000   // GOTO 0
-}
+};
 
 uint8_t FourBitTo7Seg[16] = {
   0b11111100,  // 0
