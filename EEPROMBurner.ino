@@ -39,7 +39,7 @@ uint8_t bitshiftProgram[16] = {
 };
 
 uint8_t feinbergExample[16] = {
-  0b10000000,  // READ 2
+  0b10000010,  // READ 2
   0b00010000,  // LOAD IT
   0b00100001,  // ADD 1
   0b01100010,  // STORETO 2
